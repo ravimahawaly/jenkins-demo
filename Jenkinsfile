@@ -18,6 +18,11 @@ pipeline {
                 sh 'echo "Your code has passed the SonarQube testing and now ready to deploy"'
             }
         }
+        stage ("checking github integration") {
+            steps {
+                sh 'echo "If this build runs it means jenkins is checking it every 5 minute"'
+            }
+        }
         stage ("Deploy to Production") {
             steps {
                 sh 'echo "Now deploying the code to the production"'
